@@ -12,6 +12,7 @@ server.get('*', (req, res, next) => {
   if (Object.keys(req.query).length) {
     console.log(`-- query -- ${JSON.stringify(req.query)}`)
   }
+  console.log(`-- headers -- ${JSON.stringify(req.headers)}`)
   next()
 })
 
@@ -20,6 +21,7 @@ server.post('*', (req, res, next) => {
   if (req.body) {
     console.log(`-- body -- ${JSON.stringify(req.body)}`)
   }
+  console.log(`-- headers -- ${JSON.stringify(req.headers)}`)
   next()
 })
 
