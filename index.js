@@ -5,6 +5,7 @@ const server = express()
 const port = process.env.PORT || 3000
 
 server.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 server.enable('trust proxy')
 
 server.get('*', (req, res, next) => {
